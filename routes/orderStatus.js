@@ -50,7 +50,7 @@ router.post('/api/v2/order_status/', function(req, res) {
       "id": 1235,
       "datetime": "2023-01-31 14:48:15",
       "type": "0",
-      "status": "Finished",
+      "status": "Open",
       "market": "DOT/USD",
       "transactions": [
           {
@@ -93,22 +93,12 @@ router.post('/api/v2/order_status/', function(req, res) {
       "id": 1249,
       "datetime": "2023-01-31 14:58:15",
       "type": "0",
-      "status": "Finished",
+      "status": "Open",
       "market": "DOT/USD",
-      "transactions": [
-          {
-              "tid": 1458532827766795,
-              "price": "5.314",
-              "{DOT}": "30.00",
-              "{USD}": "1",
-              "fee": "0.00",
-              "datetime": "2023-01-31 14:58:24",
-              "type": 0
-          }
-      ],
-      "amount_remaining": "00.00",
+      "transactions": [],        // nothing executed
+      "amount_remaining": "30.00",
       "client_order_id": "24560700023"
-  });
+    });
   } else {
     res.send({});
   }
